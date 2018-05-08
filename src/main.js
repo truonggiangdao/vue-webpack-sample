@@ -1,42 +1,17 @@
+/**
+ * The main Vue.js application file
+ *
+ * @author: Giang Dao
+ */
 import Vue from 'vue';
-import App from './App';
 import router from './router';
-import {
-  Vuetify,
-  VApp,
-  VNavigationDrawer,
-  VFooter,
-  VList,
-  VBtn,
-  VIcon,
-  VGrid,
-  VToolbar,
-  transitions,
-} from 'vuetify';
-import '../node_modules/vuetify/src/stylus/app.styl';
+import store from './store';
+import App from './components/App';
 
-Vue.use(Vuetify, {
-  components: {
-    VApp,
-    VNavigationDrawer,
-    VFooter,
-    VList,
-    VBtn,
-    VIcon,
-    VGrid,
-    VToolbar,
-    transitions,
-  },
-  theme: {
-    primary: '#ee44aa',
-    secondary: '#424242',
-    accent: '#82B1FF',
-    error: '#FF5252',
-    info: '#2196F3',
-    success: '#4CAF50',
-    warning: '#FFC107',
-  },
-});
+require('./components/components.js');
+require('./directives/directives.js');
+require('./filters/filters.js');
+require('./assets/styles.js');
 
 Vue.config.productionTip = false;
 
@@ -44,5 +19,9 @@ Vue.config.productionTip = false;
 new Vue({
   el: '#app',
   router,
-  render: h => h(App),
+  store,
+  render(h) {
+    return h('App');
+  },
+  components: { App },
 });
