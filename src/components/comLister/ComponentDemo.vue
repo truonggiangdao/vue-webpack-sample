@@ -19,7 +19,7 @@
 
           <div>
             <label>Result text:</label>
-            <h1 v-html="$options.filters.toHtmlChars(inputText)"></h1>
+            <h1 v-html="$options.filters.toAge(inputText)"></h1>
           </div>
         </div>
       </transition>

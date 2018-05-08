@@ -5,3 +5,4 @@
  */
 require('./toHtmlChars');
 require('./friendlyDate');
+require('./toAge');

@@ -20,4 +20,7 @@
 </script>
 
 <style scoped>
+  span {
+    color: blue;
+  }
 </style>

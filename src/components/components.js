@@ -4,6 +4,7 @@
  * @author: Giang Dao
  */
 import Vue from 'vue';
+import PostList from '@/components/landing/PostList';
 import {
   Vuetify,
   VApp,
@@ -27,6 +28,7 @@ import ImgDefault from './shared/ImgDefault';
 Vue.component('dash', Dash);
 Vue.component('loading', Loading);
 Vue.component('img-default', ImgDefault);
+Vue.component('post-list', PostList);
 
 Vue.use(Vuetify, {
   components: {

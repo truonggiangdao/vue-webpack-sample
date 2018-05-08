@@ -9,7 +9,6 @@
    * @author: Giang Dao
    */
   import { mapMutations } from 'vuex';
-  import PostList from '@/components/landing/PostList';
 
   export default {
     name: 'landing',
@@ -27,7 +26,6 @@
       }),
     },
     components: {
-      PostList,
     },
   };
 </script>
