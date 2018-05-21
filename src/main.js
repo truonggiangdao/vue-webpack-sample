@@ -20,8 +20,6 @@ new Vue({
   el: '#app',
   router,
   store,
-  render(h) {
-    return h('App');
-  },
+  render: h => h('App'),
   components: { App },
 });
