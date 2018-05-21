@@ -20,8 +20,8 @@
  * isMobile.windows.tablet
  * isMobile.windows.device (any mobile Windows device)
  */
-const isMobile = require('ismobilejs');
-const MobileDetect = require('mobile-detect');
+import isMobile from 'ismobilejs';
+import MobileDetect from 'mobile-detect';
 
 /*
  * OS Detector:

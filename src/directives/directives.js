@@ -3,5 +3,5 @@
  *
  * @author: Giang Dao
  */
-require('./scrollDispatcher/scrollDispatcher');
-require('./focus/focus');
+import './scrollDispatcher/scrollDispatcher';
+import './focus/focus';
