@@ -6,6 +6,7 @@
       <v-toolbar-items>
         <v-btn flat to="/">Landing</v-btn>
         <v-btn flat to="/components-list">Components</v-btn>
+        <v-btn flat :to="{name: 'popup'}">Popup</v-btn>
       </v-toolbar-items>
     </v-toolbar>
     <v-content>

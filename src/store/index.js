@@ -11,6 +11,7 @@ Vue.use(Vuex);
  */
 export default new Vuex.Store({
   state: {
+    showLoadIcon: false,
     title: '',
     menuOpen: false,
     clickingStack: [],
@@ -23,8 +24,11 @@ export default new Vuex.Store({
     onLandscapeSmallScreen: false,
   },
   getters: {
-    loading(state) {
-      return state.loadingStack.length > 0;
+    loadingIcon({ showLoadIcon }) {
+      return showLoadIcon;
+    },
+    loading({ loadingStack }) {
+      return loadingStack.length > 0;
     },
     isMenuOpen(state) {
       return state.menuOpen;
@@ -64,6 +68,12 @@ export default new Vuex.Store({
     },
   },
   mutations: {
+    setLoadingIcon(state, param) {
+      // eslint-disable-next-line
+      console.log('here', Boolean(param));
+      // eslint-disable-next-line
+      state.showLoadIcon = Boolean(param);
+    },
     disableBtnClick(state) {
       state.clickingStack.push(new Date().toISOString());
       setTimeout(() => {

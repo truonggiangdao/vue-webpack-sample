@@ -1,5 +1,8 @@
 <template>
-  <post-list></post-list>
+  <div>
+    <Btn text="Btn C"/>
+    <post-list></post-list>
+  </div>
 </template>
 
 <script>
@@ -9,6 +12,7 @@
    * @author: Giang Dao
    */
   import { mapMutations } from 'vuex';
+  import Btn from '../popupPage/btn';
 
   export default {
     name: 'landing',
@@ -26,6 +30,7 @@
       }),
     },
     components: {
+      Btn,
     },
   };
 </script>

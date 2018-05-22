@@ -9,6 +9,7 @@ import Router from 'vue-router';
 import Landing from '@/components/landing/Landing';
 import ComListerRouteView from '@/components/comLister/ComListerRouteView';
 import ComListerRoutes from '@/components/comLister/comLister.routes';
+import PopupPage from '@/components/popupPage/popupPage';
 
 Vue.use(Router);
 
@@ -25,6 +26,11 @@ export default new Router({
       // name: 'components',
       component: ComListerRouteView,
       children: ComListerRoutes,
+    },
+    {
+      path: '/popup',
+      name: 'popup',
+      component: PopupPage,
     },
   ],
 });
